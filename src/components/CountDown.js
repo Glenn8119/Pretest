@@ -14,11 +14,14 @@ const CountDown = () => {
         setInterval(() => {
             const date = new Date();
             const timeDifference = new Date(tomorrow-date).getTime()
-            // setCurrentTimeDifference(timeDifference);
-            const hour = new Date(timeDifference).getUTCHours();
-            const minute = new Date(timeDifference).getUTCMinutes();
-            const second = new Date(timeDifference).getUTCSeconds();
-            setTimeArr([hour, minute, second]);
+            if(timeDifference>0){
+                const hour = new Date(timeDifference).getUTCHours();
+                const minute = new Date(timeDifference).getUTCMinutes();
+                const second = new Date(timeDifference).getUTCSeconds();
+                setTimeArr([hour, minute, second]);
+            } else {
+                setTimeArr([0,0,0])
+            }
         }, 1000);
     }, [])
 
