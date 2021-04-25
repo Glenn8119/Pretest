@@ -139,7 +139,6 @@ body{
 .carousel{
     height:25rem;
     width:90%;
-    background-color: orangered;
     margin: 6rem auto 2rem auto;
     position: relative;
 }
@@ -156,7 +155,6 @@ body{
     list-style:none;
     display:flex;
     transition: all 1s;
-    margin-left: -900%;
 }
 
 .carousel__slide{

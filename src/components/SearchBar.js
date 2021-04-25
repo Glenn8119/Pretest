@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { setSelectedMovies } from "../actions"
 import { movies } from "./movies"
 
-const SearchBar = ({ selectedMovies, setSelectedMovies }) => {
+const SearchBar = ({ setSelectedMovies }) => {
 
     const [inputValue, setInputValue] = useState("")
     const [debouncedInputValue, setDebouncedInputValue] = useState("");
@@ -41,10 +41,4 @@ const SearchBar = ({ selectedMovies, setSelectedMovies }) => {
     )
 }
 
-const mapStateToProps = (state) => {
-    return {
-        selectedMovies: state.selectedMovies
-    }
-}
-
-export default connect(mapStateToProps, { setSelectedMovies })(SearchBar);
+export default connect( null , { setSelectedMovies })(SearchBar);
